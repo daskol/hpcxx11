@@ -17,7 +17,7 @@ void sum_vectors(std::vector<float> const &a,
 
     omp_set_num_threads(4);
 
-#pragma omp parallel num_threads(4) shared(a, b, c) private(i) for
+#pragma omp parallel
     for (size_t i = 0; i != size; ++i) {
         c_data[i] = a_data[i] + b_data[i];
     }
